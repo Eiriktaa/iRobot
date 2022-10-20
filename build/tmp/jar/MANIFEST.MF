@@ -1,3 +1,3 @@
 Manifest-Version: 1.0
-robots: example.ExampleRobot
+robots: TrefferBareVeggen.TrefferBareVeggen
 
