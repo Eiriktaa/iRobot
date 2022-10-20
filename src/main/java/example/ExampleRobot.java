@@ -1,16 +1,16 @@
-package TrefferBareVeggen;
+package example;
 
 import robocode.Robot;
-import robocode.ScannedRobotEvent;
 
-public class TrefferBareVeggen extends Robot {
+public class ExampleRobot extends Robot {
     @Override
     public void run() {
 
         double height = getBattleFieldHeight();
-        double height_lim = height / 5;
+        double height_lim = height /5;
         double width = getBattleFieldWidth();
         double width_lim = width / 5;
+
         while(true){
 
             double x = getX();
@@ -34,19 +34,5 @@ public class TrefferBareVeggen extends Robot {
 
     }
 
-    public void onScannedRobot(ScannedRobotEvent event) {
-        double bearing = event.getBearing();
-        double distance = event.getDistance();
-        turnGunRight(bearing);
-        if (bearing < 0) {
-            // turnLeft(bearing);
-            fire(1);
-        } else if (bearing > 0) {
-            // turnRight(bearing);
-            fire(1);
-        } else {
-            fire(1);
-        }
-    }
 
 }
